@@ -1,0 +1,319 @@
+nav {
+  background-color: #f83;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 1px;
+  z-index: 999;
+  box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.3);
+  position: fixed;
+  text-align: center;
+
+}
+
+.apps > h3{
+  color: #f83;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.apps > hr{
+  border: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+  top: -10px;
+  width: 150px;
+}
+
+.notifications > h3{
+  color: #666;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+  position: relative;
+  top: 8px;
+  left: 10px;
+}
+
+.notifications> hr{
+  border: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+  top: -13px;
+  left: 19px;
+  width: 170px;
+}
+
+
+
+.fa-search{
+  position: relative;
+  left: 140px;
+  top: 10px;
+  z-index: 99;
+  color: white;
+}
+
+.fa-bars{
+  position: relative;
+  right: 10px;
+  top: -8px;
+}
+
+.fa-bars:hover{
+  color: #f83;
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  text-align: center;
+  padding-top: 13px;
+  position: relative;
+  right: 20px;
+  top: -13px;
+  transform: scale(1);
+}
+
+.left{
+  position: absolute;
+  left: -20px;
+}
+
+input {
+  width: 400px;
+  position: relative;
+  left: 100px;
+  top: 10px;
+  height: 40px;
+  border: 0;
+  border-radius: 50px;
+  padding: 0 10px;
+  color: white;
+  background-color: rgba(245,245,245,0.3);
+  transition: 0.5s;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.08);
+  text-transform: ;
+  letter-spacing: 1px;
+  padding: 0 45px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #666;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #666;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #666;
+}
+
+button {
+  float: right;
+  margin: 10px 30px 10px 10px;
+  position: relative;
+  top: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  border: 0;
+  background-color: white;
+  color: #f83;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: rgba(250,131,45,0.3);
+  color: white;
+}
+
+.logo {
+  float: left;
+  position: relative;
+  left: 45px;
+  top: 5px;
+  color: white;
+}
+
+.logo > .fa-google{
+  margin-left:15px;
+}
+
+
+p {
+  position: relative;
+  left: 50px;
+  top: -30px;
+  border-bottom: 5px solid rgba(255,255,255,0.9);
+  padding-bottom: -2px;
+  margin-left: 10px;
+  box-shadow: -5px 0 10px -4px rgba(0, 0, 0, 0.2);
+  font-size: 0.84em;
+  font-weight: 900;
+  text-transform: uppercase;
+  z-index: 9;
+}
+
+svg{
+  fill: #666;
+}
+
+.left-menu{
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  z-index: 9999;
+  box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.left-menu > ul{
+  margin-top: -20px;
+}
+
+.left-menu > ul > li{
+  list-style: none;
+  margin-bottom: 0px;
+  padding: 13px 0 0 20px;
+  font-size: 0.8em;
+  color: #666;
+  margin-left: -40px;
+}
+
+.left-menu > ul > li:hover{
+  background-color: rgba(250,131,45,0.5);
+}
+
+.left-menu-text{
+  color: #666;
+  border: 0;
+  position: relative;
+  left: 60px;
+  top: -20px;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.left-menu-text > a {
+  text-decoration: none;
+}
+
+.left-menu-text > a:visited {
+  color: #666;
+}
+
+
+.left-menu > .fa-lg {
+  position: relative;
+  text-align: center;
+  padding-top: 12px;
+  left: 20px;
+  top: -40px;
+  background-color: #f83;
+  color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.left-menu > .fa-lg:hover {
+  background-color: #eef;
+  color: #f83;
+}
+
+.left-menu > .fa-google{
+  position: relative;
+  left: 80px;
+  top: 25px;
+  color: #f83;
+}
+
+.left-menu > p{
+  position: relative;
+  font-weight: 900;
+  left: 123px;
+  top: -3px;
+  width: 87px;
+  color: #f83;
+  border-bottom: 2px solid rgba(250,131,45,0.9);
+}
+
+.left-menu > hr {
+  position: relative;
+  top: 370px;
+  border: 0.5px solid rgba(0,0,0,0.2);
+}
+
+.apps{
+  height: 400px;
+  width: 380px;
+  background-color: white;
+  position: absolute;
+  right: 100px;
+  top: -400px;
+  z-index: 999;
+  box-shadow: -4px 2px 10px 1px rgba(0,0,0,0.1),
+              inset 0 15px 25px -15px rgba(0,0,0,0.5);
+  padding: 20px;
+
+}
+
+.app{
+  background-color: red;
+  height: 60px;
+  width: 60px;
+  margin: 9px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.notifications{
+  height: 400px;
+  width: 300px;
+  background-color: #eef;
+  position: absolute;
+  right: 20px;
+  top: -400px;
+  z-index: 999;
+  box-shadow: -4px 2px 10px 1px rgba(0,0,0,0.1),
+              inset 0 15px 25px -15px rgba(0,0,0,0.5);
+}
+
+.message {
+  height: 40px;
+  width: 100%;
+  background-color: rgba(250,131,45,0.2);
+  position: relative;
+  left: 0;
+  top: 1px;
+  text-transform: none;
+  color: #666;
+  padding: 12px;
+}
+
+#settings-icon{
+  position: relative;
+  float: right;
+  top: -45px;
+  right: 20px;
+  color: #666;
+}
+
+.accounts{
+  height: 400px;
+  width: 200px;
+  background-color: rgba(250,131,45,0.5);
+  position: absolute;
+  right: -400px;
+  top: 60px;
+  z-index: 999;
+  box-shadow: -4px 2px 10px 1px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 950px) {
+  nav {
+    width: 950px;
+  }
+}

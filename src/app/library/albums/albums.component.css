@@ -1,0 +1,63 @@
+img {
+  height: inherit;
+  width: inherit;
+  border-bottom: 2px solid #f83;
+}
+
+.card {
+  height: 140px;
+  width: 140px;
+  display: inline-block;
+  background-color: red;
+  vertical-align: top;
+  margin: 50px 20px 70px 20px;
+  transition: 0.2s;
+}
+
+.card:hover{
+  box-shadow: 1px 1px 20px rgba(0,0,0,0.3),
+              -1px -1px 20px rgba(0,0,0,0.3);
+}
+
+.artist-name {
+  position: relative;
+  top: 30px;
+  left: 5px;
+  font-size: 0.55em;
+  background-color: rgba(245,245,245,0.8);
+  color: #f83;
+  padding: 5px;
+  float: left;
+  text-transform: uppercase;
+}
+
+.album-name{
+  height: 10px;
+  width: 200px;
+  padding-top: 10px;
+  padding-left: 5px;
+  display: block;
+  color: #666;
+  font-size: 0.8em;
+}
+
+.info{
+  position: relative;
+  top: -4px;
+  width: inherit;
+  height: 70px;
+  background-color: ;
+  overflow: hidden;
+  box-shadow: inset -15px 0 30px -5px rgba(250,131,45,0.3);
+}
+
+.explicit{
+  display: inline-block;
+  position: relative;
+  float: right;
+  top: 30px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  fill: #58b;
+}

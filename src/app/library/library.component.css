@@ -1,0 +1,62 @@
+nav{
+  height: 50px;
+  width: 750px;
+  background-color: #f83;
+  position: relative;
+  top: 20px;
+  padding-top: 12px;
+  text-align: center;
+}
+
+h3{
+  display: inline-block;
+  background-color: white;
+  height: 52px;
+  width: 100px;
+  position: relative;
+  top: -14px;
+  left: -73px;
+  padding-top: 15px;
+  text-transform: uppercase;
+  color: #f83;
+  letter-spacing: 1.2px;
+}
+
+ul {
+
+}
+
+ul > li {
+  display: inline;
+  color: white;
+  padding-top: -10px;
+  margin: 20px;
+  position: relative;
+  left: -70px;
+  top: -4px;
+  text-transform: ;
+}
+
+ul > li > a {
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+ul > li > a:visited {
+  color: inherit;
+}
+
+ul > li > a:hover {
+  color: #46d;
+  border-bottom: 3px white solid;
+  padding-bottom: 2px;
+}
+
+.container {
+  background-color: ;
+  width: 720px;
+  height: 500px;
+  padding-bottom: 100px;
+  position: relative;
+  top: 50px;
+}

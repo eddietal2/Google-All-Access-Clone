@@ -1,0 +1,8 @@
+<div *ngFor='let x of artistData.artists'
+      class="artist">
+      <img
+        src="{{ x.artistsPicture }}"
+        [routerLink]="['/artists', 'artistId']"
+        (click)="getArtistInfo()"  />
+        <p>{{ x.artistName }}</p>
+</div>

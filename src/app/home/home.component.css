@@ -1,0 +1,90 @@
+.recent{
+  background-color: ;
+  width: 80%;
+  height: 200px;
+  margin: 10px;
+}
+
+.recent > hr {
+  border: 1px solid rgba(0,0,0,0.2);
+  position: relative;
+  top: 20px;
+  width: 600px;
+}
+
+h3 {
+  display: inline;
+  margin-right: 20px;
+  color: #666;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 1.2px;
+}
+
+hr {
+  position: relative;
+  top: -50px;
+  left: 20px;
+  width: 100px;
+}
+
+/* Recents Section */
+.recent > ul {
+  background-color: rgba(0,0,0,0.1);
+  padding: 25px;
+}
+
+.recent > ul > li {
+  display: inline-block;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  vertical-align: top;
+}
+
+.recent > ul > li > img {
+  height: 100px;
+  width: 100px;
+  transition: 0.2s;
+}
+
+.recent > ul > li > img:hover {
+  transform: scale(1.005);
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.15),
+              -3px -3px 10px rgba(0,0,0,0.15);
+}
+
+h1 {
+  display: block;
+  margin-bottom: 50px;
+  padding: 20px;
+  text-align: left;
+  color: #46d;
+}
+
+.new-releases, .party-playlist, .workout-playlist, .study-playlist{
+  background-color: ;
+  width: 100%;
+  height: auto;
+  padding-bottom: 250px;
+  margin: 10px;
+  text-align: center;
+}
+
+.study-playlist{
+  padding-bottom: 50px;
+}
+
+
+.new-releases > ul > li,
+.party-playlist > ul > li,
+.workout-playlist > ul > li,
+.study-playlist > ul > li
+ {
+  display: inline-block;
+  margin: 10px;
+  height: 250px;
+  width: 250px;
+  background-color: blue;
+}

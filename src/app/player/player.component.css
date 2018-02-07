@@ -1,0 +1,85 @@
+.player {
+  background-color: #f83;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  box-shadow: 1px 0 10px 1px rgba(0,0,0,0.3);
+  color: white;
+}
+
+.pic {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+
+.info {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  left: 100px;
+}
+
+.fa-play-circle{
+  margin-top: 15px;
+}
+
+.fa-backward{
+  position: relative;
+  right: 20px;
+  top: -15px;
+}
+
+.fa-forward{
+  position: relative;
+  left: 20px;
+  top: -15px;
+}
+
+.fa-retweet{
+  position: relative;
+  right: 40px;
+  top: -15px;
+}
+
+.fa-arrows-alt{
+  position: relative;
+  left: 40px;
+  top: -15px;
+}
+
+.fa-volume-up{
+  float: right;
+  position: relative;
+  right: 100px;
+  top: 40px;
+}
+
+.fa-play-circle,
+.fa-backward,
+.fa-forward,
+.fa-retweet,
+.fa-arrows-alt,
+.fa-volume-up {
+  transition: 0.5s;
+}
+
+.fa-play-circle:hover,
+.fa-backward:hover,
+.fa-forward:hover,
+.fa-retweet:hover,
+.fa-arrows-alt:hover,
+.fa-volume-up:hover {
+  transform: scale(0.95);
+}
+
+
+@media screen and (max-width: 950px) {
+  .player {
+    width: 950px;
+  }
+}

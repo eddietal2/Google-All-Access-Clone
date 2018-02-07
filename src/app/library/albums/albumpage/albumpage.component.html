@@ -1,0 +1,57 @@
+<!-- {{albumToDisplay.name}}
+{{albumToDisplay.artistName}} -->
+
+<div class="album">
+  <img src="{{albumToDisplay.albumCover}}" style="float: left;"/>
+
+  <div class="info">
+    <h1>{{albumToDisplay.name}}</h1>
+    <svg class="explicit"
+        *ngIf="albumToDisplay.isExplicit === 'true'"
+        viewBox="0 0 24 24"
+        preserveAspectRatio="xMidYMid meet"
+        focusable="false">
+          <g class="style-scope iron-icon">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"></path></g></svg>
+
+      <i class="fa fa-play fa-lg"></i><br>
+
+    <div class="info-2">
+      <p>{{albumToDisplay.artistName}}</p><br>
+      <p>{{albumToDisplay.year}}</p>
+      <p>{{albumToDisplay.genre}}</p>
+    </div>
+
+    <div class="info-3">
+      <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
+        <g>
+          <path d="M4,6 L2,6 L2,20 C2,21.1 2.9,22 4,22 L18,22 L18,20 L4,20 L4,6 L4,6 Z M20,2 L8,2 C6.9,2 6,2.9 6,4 L6,16 C6,17.1 6.9,18 8,18 L20,18 C21.1,18 22,17.1 22,16 L22,4 C22,2.9 21.1,2 20,2 Z M12.468781,14 L9,10.5021861 L10.4023786,9.08806996 L12.468781,11.1717676 L17.5976214,6 L19,7.41411618 L12.468781,14 Z" class="style-scope iron-icon"></path>
+        </g></svg>
+      <p>Remove from Library</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="songs">
+  <div class="songs-header">
+    <p>#</p>
+    <p>Name</p>
+    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><g><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></g></svg>
+
+  </div>
+  <div class="song-block" *ngFor='let song of songsToDisplay'>
+    <p>{{song.tracknumber}}</p>
+    <p>{{song.name}}</p>
+    <p>{{song.length}}</p>
+    <svg class="explicit"
+        *ngIf="albumToDisplay.isExplicit === 'true'"
+        viewBox="0 0 24 24"
+        preserveAspectRatio="xMidYMid meet"
+        focusable="false">
+          <g class="style-scope iron-icon">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"></path></g></svg>
+  </div>
+</div>

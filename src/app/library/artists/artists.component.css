@@ -1,0 +1,29 @@
+.artist{
+  height: 100px;
+  width: 100px;
+  background-color: ;
+  border-radius: 100px;
+  display: inline-block;
+  margin: 20px 20px 50px 20px;
+  text-align: center;
+}
+
+p{
+  display: inline;
+  position: relative;
+  top: 10px;
+  font-size: 0.65em;
+}
+
+img{
+  height: inherit;
+  width: inherit;
+  border-radius: 100px;
+  transition: 0.5s;
+  border: 2px solid white;
+}
+
+img:hover{
+  box-shadow: 1px 1px 20px rgba(0,0,0,0.2),
+              -1px -1px 20px rgba(0,0,0,0.2);        
+}
