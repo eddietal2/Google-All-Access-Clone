@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="header">
+    <h2>Top Songs</h2>
+    <button class="all"
+            type="button"
+            name="button"
+            [routerLink]="[{ outlets: { 'artist-songs': ['all-songs'] } }]" >All</button>
+    <button class="top-5"
+            type="button"
+            name="button"
+            [routerLink]="[{ outlets: { 'artist-songs': ['top5'] } }]" >Top 5</button>
+  </div>
+
+  <top5></top5>
+
+</div>

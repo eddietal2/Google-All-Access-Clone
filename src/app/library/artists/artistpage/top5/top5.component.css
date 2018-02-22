@@ -1,0 +1,161 @@
+/* Top Songs Section */
+
+
+
+.top-songs{
+  /* height: auto;
+  background-color: rgba(250,131,45,0.2);
+  width: auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 20px 20px 100px 20px rgba(250,131,45,0.04),
+              -1px -1px 100px 20px rgba(250,131,45,0.04); */
+}
+
+.top-songs > ul > li {
+  list-style: none;
+  transition: 0.2s;
+  margin-left: -40px;
+}
+
+
+.top-songs > ul > li:hover {
+  background-color: rgba(81,157,255,0.3);
+  color: white;
+  fill: white;
+  box-shadow: inset 0 -2px 5px  rgba(0,0,0,0.2);
+  border-right: 10px solid #58f;
+  transform: translateX(10px);
+}
+
+.explicit-top-5{
+  display: inline-block;
+  position: relative;
+  top: -48px;
+  left: 300px;
+  width: 20px;
+  height: 20px;
+  fill: #f83;
+}
+
+.song-card-header{
+  background-color: rgba(250,131,45,1);
+  height: 35px;
+  width: 820px;
+  position: relative;
+  left: -40px;
+}
+
+.song-card-header > h3 {
+  color: white;
+  display: inline;
+  font-size: 0.7em;
+}
+
+/* Name Column */
+.song-card-header > h3:nth-child(1){
+  position: relative;
+  left: 80px;
+  top: 4px;
+}
+
+/* Artist Column */
+.song-card-header > h3:nth-child(2){
+  position: relative;
+  left: 315px;
+  top: 4px;
+}
+
+/* Album Column */
+.song-card-header > h3:nth-child(3){
+  position: relative;
+  left: 395px;
+  top: 4px;
+}
+
+.song-card-header > .time-icon {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 170px;
+  top: 10px;
+}
+
+.song-card-header > .play-count {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 480px;
+  top: 10px;
+}
+
+.song-card-header > .thumbs {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 580px;
+  top: 10px;
+}
+
+
+.song-card{
+  height: 50px;
+  width: 100%;
+  position: relative;
+  right: 40px;
+}
+
+.song-card > img {
+  width: 40px;
+  height: 40px;
+  float: left;
+  position: relative;
+  left: 50px;
+  top: 5px;
+}
+
+.song-card > .explicit {
+  position: relative;
+  top: -10px;
+  left: 300px;
+  fill: #f83;
+}
+
+.song-name{
+  position: relative;
+  font-size: 0.8em;
+  font-weight: 600;
+  top: 15px;
+  left: 80px;
+  color: #555;
+}
+
+.song-artist{
+  position: relative;
+  font-size: 0.8em;
+  font-weight: 600;
+  top: 0px;
+  left: 350px;
+  color: #555;
+}
+
+.song-album{
+  position: relative;
+  font-size: 0.8em;
+  font-weight: 600;
+  top: -15px;
+  left: 470px;
+  color: #555;
+}
+
+.song-length{
+  position: relative;
+  font-size: 0.8em;
+  font-weight: 600;
+  top: -30px;
+  left: 330px;
+  color: #555;
+}

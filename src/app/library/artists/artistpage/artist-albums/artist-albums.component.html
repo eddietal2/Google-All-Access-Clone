@@ -1,0 +1,29 @@
+<!-- Albums Section -->
+<div class="albums">
+  <div class="header">
+    <h2>Albums</h2>
+    <button class="see-all" type="button" name="button">See All</button>
+  </div>
+  <div class="albums-container">
+    <div class="album-cover"
+         (click)="goToDetailPage(album)"
+         *ngFor="let album of albumsToDisplay"
+         (mouseover)="hoverState(true)"
+         (mouseout)="hoverState(false)" >
+      <img src="{{album.albumCover}}" alt="">
+      <div class="album-info">
+        <p class="album-name"
+           [@color-white]="hover">{{ album.name }}</p>
+        <p class="artist-name"
+           [@color-blue]="hover">{{ album.artistName }}</p>
+          <svg class="explicit"
+               [@color-white]="hover"
+               *ngIf="album.isExplicit === 'true'"
+               viewBox="0 0 24 24"
+               preserveAspectRatio="xMidYMid meet"
+               focusable="false">
+                <g>
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"></path></g></svg>
+      </div>
+      </div>
+  </div>

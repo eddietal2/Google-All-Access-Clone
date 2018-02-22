@@ -1,0 +1,83 @@
+
+
+.artist-info{
+  background-color: ;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 150px;
+  z-index: 9;
+}
+
+
+.pic {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: -50px;
+  top: 40px;
+  display: inline-block;
+  border-radius: 100px;
+  float: ;
+  z-index: ;
+  box-shadow: 2px 2px 30px 2px rgba(250,131,45,0.2),
+              -2px -2px 30px 2px rgba(250,131,45,0.2);
+}
+
+h1 {
+  position: relative;
+  left: -17px;
+  top: 30px;
+  color: #555;
+}
+
+.info {
+  position: relative;
+  left: 180px;
+  top: -160px;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 1.1px;
+  line-height: 20px;
+  margin: 8px;
+  background: linear-gradient(to right, rgba(245,245,245,1), rgba(250,131,45,0.1));
+  width: 520px;
+  max-height: 200px;
+  overflow-y: scroll;
+  border-radius: 0;
+  border-left: 10px #f83 solid;
+  z-index: 2;
+  padding: 20px 20px 20px 30px;
+}
+
+.info::-webkit-scrollbar {
+    width: 1em;
+    margin-left: 5px;
+    position: relative;
+    left: 20px;
+    background-color: white;
+}
+
+.info::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+.info::-webkit-scrollbar-thumb {
+  background-color: #f83;
+}
+
+.album-length{
+  left: 597px;
+  top: -180px;
+  width: 95px;
+  padding: 10px 10px 10px 10px;
+  border-left: 10px #f83 solid;
+  background: linear-gradient(to right, rgba(245,245,245,1), rgba(250,131,45,0.1));
+  color: #555;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  margin: 5px;
+  position: relative;
+}

@@ -1,0 +1,12 @@
+<div class="artist-info">
+  <img src="{{artistInfo[0].artistsPicture}}"
+       class="pic"
+       [@slide-in]="state" >
+  <h1 style="display: inline-block; vertical-align: top;"
+      [@fade-in]="state">{{artistInfo[0].artistName}}</h1>
+  <p class="album-length"
+      [@fade-in-left]="state">{{albumsToDisplay.length}} albums</p>
+  <p class="info"
+     [@fade-up]="state">
+    {{artistInfo[0].info}}</p>
+</div>

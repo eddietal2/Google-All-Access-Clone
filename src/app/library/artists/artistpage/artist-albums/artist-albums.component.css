@@ -1,0 +1,143 @@
+/* Albums Section */
+
+.header{
+  background: linear-gradient(to left, rgba(245,245,245,1), rgba(250,131,45,0.9));
+  padding-top: 25px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.header > h2 {
+  position: relative;
+  top: -10px;
+  left: 25px;
+  font-size: 1.2em;
+  color: white;
+  background-color: ;
+  width: 120px;
+  height: 30px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.see-all{
+  float: right;
+  position: relative;
+  top: -40px;
+  right: 10px;
+  border-radius: 0px;
+  border: 0;
+  height: 30px;
+  width: 100px;
+  color: white;
+  background-color: rgba(250,131,45,0.5);
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.see-all:hover {
+  background-color: rgba(81,157,255,0.9);
+  box-shadow: 2px 2px 10px 2px rgba(2,2,2,0.03),
+              -2px -2px 10px 2px rgba(2,2,2,0.03);
+}
+
+.albums {
+  background: linear-gradient(to left, rgba(250,131,45,0.4), rgba(250,131,45,0.2));
+  height: 385px;
+  width: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  position: relative;
+  left: 0px;
+  padding: 20px;
+  box-shadow: 20px 20px 100px 20px rgba(250,131,45,0.04),
+              -1px -1px 100px 20px rgba(250,131,45,0.04),
+              0 1px 6px rgba(0,0,0,0.2);
+}
+
+.albums > .header > .see-all {
+  position: relative;
+  right: 40px;
+}
+
+
+.albums > .header > h2 {
+  position: relative;
+  left: 40px;
+  width: 75px;
+  height: 30px;
+  padding: 5px;
+}
+
+.albums-container {
+  background: linear-gradient(to bottom,
+              rgba(250,131,45,0.4),
+              rgba(250,131,45,0.2));
+  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+  margin-left: 0px;
+}
+
+.album-cover {
+  margin: 30px 20px 50px 20px;
+  display: inline-block;
+  transition: 0.2s;
+  border-bottom: 10px solid rgba(81,157,255,0);
+}
+
+.album-cover > img {
+  height: 140px;
+  width: auto;
+  margin-bottom: -5px;
+}
+
+.album-cover:hover{
+  /* box-shadow: 1px 1px 20px rgba(0,0,0,0.3),
+              -1px -1px 20px rgba(0,0,0,0.3); */
+  background-color: rgba(81,157,255,0.4);
+  border-bottom: 10px solid rgba(81,157,255,0.9);
+  color: white;
+}
+
+.album-info{
+  height: 70px;
+  width: 140px;
+  background-color: rgba(250,131,45,0.2);
+  position: relative;
+  top: 0;
+}
+
+.album-info:hover{
+
+}
+
+.artist-name {
+  position: relative;
+  top: 30px;
+  left: 5px;
+  font-size: 0.55em;
+  background-color: #f83;
+  color: white;
+  padding: 5px;
+  float: left;
+  text-transform: uppercase;
+}
+
+.album-name{
+  height: 10px;
+  width: 200px;
+  padding-top: 10px;
+  padding-left: 5px;
+  display: block;
+  color: #666;
+  font-size: 0.8em;
+}
+
+.explicit{
+  display: inline-block;
+  position: relative;
+  float: right;
+  top: 30px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  fill: #f83;
+}
