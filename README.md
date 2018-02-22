@@ -1,3 +1,15 @@
+This is a project I am doing for myself. Originally it started as a clone of Google All Access written in Angular (to learn), but now I am going to create my own svg logos / brand image and create my own music player.
+
+Right now, these are the things that need to be done:
+
+- Program songs to play, and also add mp3 files to in-app database.
+- Finish building interface for each page
+- Create logo for 'E-Player' (E stands for Eddie, so Eddie player basically)
+- Craft out custom playlist
+- Craft out homepage.
+
+
+
 # GAA
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
