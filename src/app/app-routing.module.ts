@@ -13,6 +13,10 @@ import { StationsComponent } from './library/stations/stations.component';
 import { AlbumsComponent } from './library/albums/albums.component';
 import { ArtistPageComponent } from './library/artists/artistpage/artistpage.component';
 import { AlbumpageComponent } from './library/albums/albumpage/albumpage.component';
+import { AllSongsComponent } from './library/artists/artistpage/all-songs/all-songs.component';
+import { Top5Component } from './library/artists/artistpage/top5/top5.component';
+import { AllAlbumsComponent } from './library/artists/artistpage/all-albums/all-albums.component';
+
 
 
 const routes: Routes = [
@@ -29,7 +33,25 @@ const routes: Routes = [
         { path: 'stations', component: StationsComponent }
       ]
   },
-  { path: 'artists/:artistId', component: ArtistPageComponent },
+  { path: 'artists/:artistName', component: ArtistPageComponent,
+    children: [
+      {
+        path: '',
+        outlet: 'artistsongs',
+        component: Top5Component
+      },
+      {
+        path: 'top5',
+        outlet: 'artistsongs',
+        component: Top5Component
+      },
+      {
+        path: 'all-songs',
+        outlet: 'artistsongs',
+        component: AllSongsComponent
+      }
+    ]
+  },
   { path: 'albums/:albumName', component: AlbumpageComponent },
 ]
 
