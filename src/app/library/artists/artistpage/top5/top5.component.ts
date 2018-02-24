@@ -15,7 +15,6 @@ export class Top5Component implements OnInit {
   artistName: any = null;
   artistInfo: any = null;
   albumsToDisplay: any = null;
-  artistGenre: any = null;
   artistData = this.dataService.data.artists;
   dataFromArtistPage: any = this.artistPageData;
 
