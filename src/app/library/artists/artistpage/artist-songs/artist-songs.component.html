@@ -4,13 +4,13 @@
     <button class="all"
             type="button"
             name="button"
-            [routerLink]="[{ outlets: { 'artist-songs': ['all-songs'] } }]" >All</button>
+            [routerLink]="[{ outlets: { artistsongs: ['allsongs'] } }]">All</button>
     <button class="top-5"
             type="button"
             name="button"
-            [routerLink]="[{ outlets: { 'artist-songs': ['top5'] } }]" >Top 5</button>
+            [routerLink]="[{ outlets: { artistsongs: ['top5'] } }]" >Top 5</button>
   </div>
 
-  <top5></top5>
+  <router-outlet name="artistsongs"></router-outlet>
 
 </div>
