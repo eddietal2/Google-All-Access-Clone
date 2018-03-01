@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+import { DataService } from './../data.service';
+import { SharedService } from './../shared.service';
+
 
 @Component({
   selector: 'player',
@@ -7,7 +10,19 @@ import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  constructor() { }
+  songInfo: any = "lol";
+
+  constructor(
+    private dataService: DataService,
+    private sharedService: SharedService
+  ) {
+     sharedService.changeEmitted$.subscribe(
+      song => {
+          this.songInfo = song;
+          console.log(this.songInfo)
+      });
+
+    }
 
   ngOnInit() {
   }
