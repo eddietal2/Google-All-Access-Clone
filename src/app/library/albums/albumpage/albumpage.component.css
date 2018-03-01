@@ -117,7 +117,10 @@
 }
 
 .song-card-header{
-  background-color: rgba(250,131,45,1);
+  background: radial-gradient(
+    rgba(250,131,45, 1),
+    rgba(250,131,45, 0.9),
+    rgba(250,131,45, 0.8));
   height: 50px;
   margin-bottom: 20px;
   width: 820px;
