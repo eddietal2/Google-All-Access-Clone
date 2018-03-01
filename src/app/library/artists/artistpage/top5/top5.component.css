@@ -15,8 +15,9 @@
 .top-songs > ul > li {
   list-style: none;
   transition: 0.2s;
-  margin-left: -40px;
+  margin-left: -20px;
 }
+
 
 
 .top-songs > ul > li:hover {
@@ -41,9 +42,10 @@
 .song-card-header{
   background-color: rgba(250,131,45,1);
   height: 35px;
-  width: 820px;
+  width: 860px;
   position: relative;
   left: -40px;
+  margin-bottom: 20px;
 }
 
 .song-card-header > h3 {
