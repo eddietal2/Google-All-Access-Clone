@@ -1,5 +1,8 @@
 .player {
-  background-color: #f83;
+  background: radial-gradient(
+    rgba(250,131,45, 1),
+    rgba(250,131,45, 0.9),
+    rgba(250,131,45, 0.9));
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -7,25 +10,35 @@
   text-align: center;
   box-shadow: 1px 0 10px 1px rgba(0,0,0,0.3);
   color: white;
+  z-index: 9999;
 }
 
 .pic {
-  background-color: red;
   height: 100px;
   width: 100px;
   position: absolute;
 }
 
+img {
+  height: 100px;
+  width: 100px;
+}
+
 .info {
   width: 100px;
   height: 100px;
-  background-color: blue;
   position: absolute;
   left: 100px;
 }
 
 .fa-play-circle{
   margin-top: 15px;
+  box-shadow: 1px 1px 1px rgba(245,245,245,0.4),
+              -1px -1px 1px rgba(245,245,245,0.4);
+  padding-top: 8px;
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
 }
 
 .fa-backward{
@@ -59,22 +72,37 @@
   top: 40px;
 }
 
-.fa-play-circle,
+.fa-play-circle {
+  transition: 0.5s;
+}
+
 .fa-backward,
 .fa-forward,
 .fa-retweet,
 .fa-arrows-alt,
 .fa-volume-up {
   transition: 0.5s;
+  padding: 2px;
+  border-radius: 50px
 }
 
-.fa-play-circle:hover,
+/* Just the HOVER effect for big Play Button */
+.fa-play-circle:hover {
+  transform: scale(0.95);
+  box-shadow: 2px 1px 30px rgba(0,0,0,0.1),
+              -2px -1px 30px rgba(0,0,0,0.1);
+  background-color: rgba(81,157,255,0.9);
+}
+
 .fa-backward:hover,
 .fa-forward:hover,
 .fa-retweet:hover,
 .fa-arrows-alt:hover,
 .fa-volume-up:hover {
-  transform: scale(0.95);
+  transform: scale(0.99);
+  box-shadow: 2px 1px 30px rgba(0,0,0,0.2),
+              -2px -1px 30px rgba(0,0,0,0.2);
+  background-color: rgba(75,123,236,0.2);
 }
 
 
