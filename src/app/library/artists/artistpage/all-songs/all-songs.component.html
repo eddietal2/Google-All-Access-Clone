@@ -1,3 +1,19 @@
-<p>
-  all-songs works!
-</p>
+<ul>
+  <li *ngFor="let song of artistsSongs"
+      (click)=getSong(song)>
+      <div class="song-card"
+           (click)="getSong(song)">
+        <img src="{{song.albumCover}}" alt="album cover">
+        <p class="song-name">{{song.name}}</p>
+        <p class="song-artist">{{song.artistName}}</p>
+        <p class="song-album">{{song.album}}</p>
+        <p class="song-length">{{song.length}}</p>
+        <svg *ngIf="song.isExplicit === 'true'"
+             viewBox="0 0 24 24"
+             class="explicit-top-5">
+          <g>
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"></path></g>
+        </svg>
+      </div>
+  </li>
+</ul>
