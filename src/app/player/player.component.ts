@@ -6,11 +6,16 @@ import { SharedService } from './../shared.service';
 @Component({
   selector: 'player',
   templateUrl: './player.component.html',
-  styleUrls: ['./player.component.css']
+  styleUrls: ['./player.component.css'],
+
 })
 export class PlayerComponent implements OnInit {
 
+  paused: boolean = true;
   songInfo: any = "lol";
+  songFile: any = "";
+  audio = new Audio();
+
 
   constructor(
     private dataService: DataService,
@@ -19,12 +24,26 @@ export class PlayerComponent implements OnInit {
      sharedService.changeEmitted$.subscribe(
       song => {
           this.songInfo = song;
-          console.log(this.songInfo)
+          this.songFile = song.file;
+          this.playSong();
+          console.log(this.songFile)
       });
 
     }
 
+  playSong(){
+    this.audio.src = this.songFile;
+    this.audio.play();
+    this.paused = false;
+  }
+
+  pauseSong(){
+    this.audio.pause();
+    this.paused = true;
+  }
+
   ngOnInit() {
+
   }
 
 }
