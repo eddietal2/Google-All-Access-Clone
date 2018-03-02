@@ -1,15 +1,24 @@
+<progress value="20" max="100"></progress>
 <div class="player">
 
-  <div class="pic">
+  <div  class="pic">
     <img src="{{songInfo.albumCover}}" alt="">
   </div>
   <div class="info">
-    <p>{{songInfo.name}}</p>
+    <p class="song-name">{{songInfo.name}}</p>
+    <p class="artist-name">{{songInfo.artistName}} - {{songInfo.albumName}}</p>
   </div>
 
   <i class="fa fa-retweet"></i>
   <i class="fa fa-backward"></i>
-  <i class="fa fa-play-circle fa-4x"></i>
+  <i class="fa fa-play-circle fa-4x"
+     (click)="playSong()"
+     *ngIf="paused"></i>
+
+  <i class="fa fa-pause fa-4x"
+     *ngIf="!paused"
+     (click)="pauseSong()"></i>
+
   <i class="fa fa-forward"></i>
   <i class="fa fa-arrows-alt"></i>
 
