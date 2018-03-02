@@ -105,13 +105,11 @@ export class AlbumpageComponent implements OnInit,  AfterViewInit  {
     this.albumName = this.route.snapshot.params['albumName'];
     this.albumToDisplay = this.getAlbumById(this.albumName);
     this.songsToDisplay = this.getSongsByArtist(this.albumSongs)
-    console.log(this.songsToDisplay);
 
   }
 
   ngAfterViewInit() {
      this.state = (this.state === 'in' ? 'out' : 'in')
      this.cdRef.detectChanges();
-     console.log('After View')
   }
 }
