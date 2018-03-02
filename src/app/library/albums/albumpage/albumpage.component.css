@@ -11,7 +11,313 @@
   height: 300px;
   width: 300px;
   position: relative;
+  top: -90px;.album {
+  height: 300px;
+  width: 820px;
+  background-color: rgba(0,0,0,0.04);
+  margin-top: 45px;
+  margin-bottom: 20px;
+  padding: 90px 20px 20px 60px;
+}
+
+.album > img {
+  height: 300px;
+  width: 300px;
+  position: relative;
   top: -90px;
+  left: -58px;
+  box-shadow: 3px 0 5px -1px rgba(0,0,0,0.6);
+}
+
+.info > h1 {
+  display: inline;
+  vertical-align: top;
+  margin-left: 20px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.info > svg {
+  height: 27px;
+  width: 27px;
+  vertical-align: top;
+  position: relative;
+  top: 6px;
+  left: 10px;
+  fill: #f83;
+}
+
+
+
+.fa-play{
+  position: relative;
+  left: 20px;
+  top: 2px;
+  height: 40px;
+  width: 40px;
+  color: white;
+  background-color: #f83;
+  text-align: center;
+  padding: 9px 1px 1px 6px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 4px solid rgba(245,245,245, 0);
+}
+
+.fa-play:hover {
+  border: 4px solid #f83;
+  background-color: rgba(250,131,45,0.1);
+  color: #f83;
+}
+
+.info-2 {
+  display: block;
+  position: relative;
+  left: 20px;
+}
+
+.info-2 > p {
+  display: inline;
+  margin: 2px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.info-2 > a {
+  display: inline;
+  margin: 2px;
+  font-size: 0.8em;
+  color: #f83;
+  transition: 0.2s;
+}
+
+.info-2 > a:hover{
+  color: #58f;
+  border-bottom: 2px solid #58f;
+}
+
+.info-3 {
+  display: block;
+  position: relative;
+  float: right;
+  bottom: -90px;
+}
+
+.info-3 > p {
+  display: inline;
+  margin: 2px;
+  font-size: 0.8em;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.info-3 > svg {
+  width: 20px;
+  height: 20px;
+  fill: #666;
+  display: inline;
+  position: relative;
+  top: 5px;
+}
+
+
+.songs{
+  height: auto;
+  background-color: ;
+  width: auto;
+  margin-bottom: 100px;
+}
+
+.song-card-header{
+  background: radial-gradient(
+    rgba(250,131,45, 1),
+    rgba(250,131,45, 0.9),
+    rgba(250,131,45, 0.8));
+  height: 50px;
+  margin-bottom: 20px;
+  width: 820px;
+}
+
+.song-card-header > h3 {
+  color: white;
+  display: inline-block;
+  font-size: 0.7em;
+}
+
+/* Name Column */
+.song-card-header > h3:nth-child(1){
+  position: relative;
+  left: -300px;
+  top: 20px;
+  float: left;
+}
+
+/* Artist Column */
+.song-card-header > h3:nth-child(2){
+  position: relative;
+  left: 15px;
+  top: 20px;
+  float: left;
+}
+
+/* Album Column */
+.song-card-header > h3:nth-child(3){
+  position: relative;
+  left: 75px;
+  top: 20px;
+  float: left;
+}
+
+
+
+.song-block{
+  list-style: none;
+  background-color: rgba(0,0,0,0.04);
+  transition: 0.2s;
+  width: auto;
+  font-weight: 600;
+  color: #555;
+}
+
+.song-block:hover{
+  background-color: rgba(81,157,255,0.9);
+  color: white;
+  font-weight: 600;
+  box-shadow: inset 0 -2px 1px  rgba(0,0,0,0.2);
+  border-right: 10px solid #f83;
+  transform: translateX(10px);
+}
+
+
+.song-block > p:nth-child(1){
+  color: white;
+  position: relative;
+  left: 20px;
+  top: 15px;
+  background-color: #f83;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 50px;
+  padding-top: 5px;
+}
+
+.song-block > p:nth-child(2){
+  color: #777;
+  font-weight: 600;
+  padding: 8px;
+  position: absolute;
+  left: 80px;
+  margin-top: -17px;
+  font-size: 0.8em;
+}
+
+.song-block > p:nth-child(3){
+  color: #666;
+  position: absolute;
+  right: 150px;
+  margin-top: -10px;
+}
+
+.song-block > svg {
+  fill: #f83;
+  width: 20px;
+  position: absolute;
+  height: 20px;
+  right: 200px;
+  margin-top: -10px;
+}
+
+/* Song Cards */
+.song-card{
+  height: 50px;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+}
+
+
+.song-card > .explicit {
+  position: relative;
+  top: -17px;
+  left: 400px;
+  fill: #f83;
+  float: left;
+  font-size: 0.8em;
+}
+
+
+.song-name{
+  position: absolute;
+  top: 4px;
+  left: 60px;
+  width: 280px;
+  padding: 10px;
+  background-color: ;
+  font-size: 0.8em;
+  overflow: hidden;
+}
+
+.song-number{
+  position: absolute;
+  top: 14px;
+  left: 40px;
+  display: inline-block;
+  float: left;
+  font-size: 0.8em;
+}
+
+.song-album{
+  position: absolute;
+  top: -20px;
+  left: 550px;
+  font-size: 0.8em;
+}
+
+.song-length{
+  position: absolute;
+  top: 10px;
+  left: 550px;
+  font-size: 0.8em;
+}
+
+.explicit{
+  position: absolute;
+  top: -10px;
+  left: 300px;
+  width: 20px;
+  height: 20px;
+  fill: #f83;
+}
+
+.time-icon {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 170px;
+  top: 10px;
+}
+
+.play-count {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 280px;
+  top: 10px;
+}
+
+.thumbs {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 180px;
+  top: 10px;
+}
+
   left: -58px;
   box-shadow: 3px 0 5px -1px rgba(0,0,0,0.6);
 }
