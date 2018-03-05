@@ -2,11 +2,14 @@
   <img src="{{artistInfo[0].artistsPicture}}"
        class="pic"
        [@slide-in]="state" >
-  <h1 style="display: inline-block; vertical-align: top;"
-      [@fade-in]="state">{{artistInfo[0].artistName}}</h1>
-  <p class="album-length"
-      [@fade-in-left]="state">{{albumsToDisplay.length}} albums</p>
-  <p class="info"
-     [@fade-up]="state">
-    {{artistInfo[0].info}}</p>
+  <div class="wrapper">
+    <div class="info-card"
+       [@fade-up]="state">
+       <h1 [@fade-in]="state">{{artistInfo[0].artistName}}</h1>
+       <hr>
+      <p class="info">{{artistInfo[0].info}}</p>
+      <p class="album-length"
+          [@fade-in-left]="state">{{albumsToDisplay.length}} albums</p>
+    </div>
+  </div>
 </div>
