@@ -1,16 +1,24 @@
 .container{
-  height: 400px;
-  background-color: rgba(250,131,45,0.2);
-  width: auto;
+  height: 420px;
+  width: 820px;
+  transition: 0.5s;
   margin: 100px 0 150px 0;
-  padding: 20px;
   position: relative;
-  box-shadow: 20px 20px 100px 20px rgba(250,131,45,0.04),
-              -1px -1px 100px 20px rgba(250,131,45,0.04);
+  overflow: hidden;
+}
+
+.container:hover {
+  background: linear-gradient(to right,
+    rgba(245,245,245,1),
+    rgba(250,131,45,0.1));
+  box-shadow: 0 15px 15px -15px rgba(0,0,0,0.5);
 }
 
 .header{
-  background: linear-gradient(to left, rgba(245,245,245,1), rgba(250,131,45,0.9));
+  background: radial-gradient(
+    rgba(250,131,45, 1),
+    rgba(250,131,45, 0.9),
+    rgba(250,131,45, 0.8));
   padding-top: 25px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
 }
@@ -22,10 +30,18 @@
   font-size: 1.2em;
   color: white;
   background-color: ;
-  width: 120px;
+  width: 160px;
   height: 30px;
   padding: 5px;
   text-transform: uppercase;
+}
+
+hr {
+  position: absolute;
+  width: 100%;
+  border: solid 1px white;
+  top: 55px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 .all{
@@ -37,16 +53,17 @@
   border: 0;
   height: 30px;
   width: 100px;
-  color: white;
-  background-color: rgba(250,131,45,0.5);
+  color: #f83;
+  background-color: white;
   text-transform: uppercase;
   transition: 0.2s;
 }
 
 .all:hover {
-  background-color: rgba(81,157,255,0.9);
+  background-color: rgba(75,123,236,1);
   box-shadow: 2px 2px 10px 2px rgba(2,2,2,0.03),
               -2px -2px 10px 2px rgba(2,2,2,0.03);
+  color: white;
 }
 
 .top-5{
@@ -58,14 +75,86 @@
   border: 0;
   height: 30px;
   width: 100px;
-  color: white;
-  background-color: rgba(250,131,45,0.5);
+  color: #f83;
+  background-color: white;
   text-transform: uppercase;
   transition: 0.2s;
 }
 
 .top-5:hover {
-  background-color: rgba(81,157,255,0.9);
+  background-color: rgba(75,123,236,1);
   box-shadow: 2px 2px 10px 2px rgba(2,2,2,0.03),
               -2px -2px 10px 2px rgba(2,2,2,0.03);
+  color: white;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    margin-left: 5px;
+    position: relative;
+    left: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #58f;
+}
+
+.song-card-header{
+  height: 35px;
+  width: 860px;
+  position: relative;
+  left: -40px;
+  margin-bottom: 0px;
+}
+
+.song-card-header > h3 {
+  color: white;
+  display: inline;
+  font-size: 0.7em;
+}
+
+/* Name Column */
+.song-card-header > h3:nth-child(1){
+  position: relative;
+  left: 125px;
+  top: 4px;
+}
+
+/* Album Column */
+.song-card-header > h3:nth-child(2){
+  position: relative;
+  left: 535px;
+  top: 4px;
+}
+
+.song-card-header > .time-icon {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 370px;
+  top: 10px;
+}
+
+.song-card-header > .thumbs {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 620px;
+  top: 10px;
+}
+
+.song-card-header > .play-count {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 680px;
+  top: 10px;
 }
