@@ -9,6 +9,15 @@
   z-index: 9;
 }
 
+.wrapper{
+  background-color: ;
+  height: 300px;
+  width: 570px;
+  position: relative;
+  left: 200px;
+  top: -150px;
+}
+
 
 .pic {
   width: 200px;
@@ -24,60 +33,76 @@
               -2px -2px 30px 2px rgba(250,131,45,0.2);
 }
 
-h1 {
-  position: relative;
-  left: -17px;
-  top: 30px;
-  color: #555;
+hr {
+  position: absolute;
+  width: 100%;
+  border: solid 1px #f83;
+  top: 50px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
-.info {
-  position: relative;
-  left: 180px;
-  top: -160px;
+h1 {
+  color: #555;
+  padding: 15px 0 0 25px;
+}
+
+.info-card {
+  background: linear-gradient(to right,
+    rgba(245,245,245,1),
+    rgba(250,131,45,0.1));
   font-size: 0.7em;
   font-weight: 600;
   color: #555;
   letter-spacing: 1.1px;
+  width: 570px;
+  height: 280px;
+  display: inline-block;
+  position: relative;
+  left: 0px;
+  top: -20px;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 15px 15px -15px rgba(0,0,0,0.5);
+}
+.info {
+  position: relative;
+  top: 20px;
+  padding: 5px;
   line-height: 20px;
-  margin: 8px;
-  background: linear-gradient(to right, rgba(245,245,245,1), rgba(250,131,45,0.1));
-  width: 520px;
-  max-height: 200px;
+  height: 170px;
+  overflow-x: none;
   overflow-y: scroll;
-  border-radius: 0;
-  border-left: 10px #f83 solid;
-  z-index: 2;
-  padding: 20px 20px 20px 30px;
+  width: 520px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  background-color: ;
 }
 
 .info::-webkit-scrollbar {
-    width: 1em;
+    width: 5px;
     margin-left: 5px;
     position: relative;
     left: 20px;
-    background-color: white;
 }
 
 .info::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: #eef;
 }
 
 .info::-webkit-scrollbar-thumb {
-  background-color: #f83;
+  background-color: #58f;
 }
 
 .album-length{
-  left: 597px;
-  top: -180px;
+  left: 450px;
+  top:  3px;
   width: 95px;
-  padding: 10px 10px 10px 10px;
-  border-left: 10px #f83 solid;
-  background: linear-gradient(to right, rgba(245,245,245,1), rgba(250,131,45,0.1));
-  color: #555;
+  padding: 10px 10px 10px 20px;
+  background-color: #f83;
+  color: white;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: 600;
   margin: 5px;
-  position: relative;
+  position: absolute;
 }
