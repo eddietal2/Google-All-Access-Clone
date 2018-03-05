@@ -86,7 +86,7 @@ h1 {
 }
 
 .info::-webkit-scrollbar-track {
-    background-color: #eef;
+    background-color: none;
 }
 
 .info::-webkit-scrollbar-thumb {
