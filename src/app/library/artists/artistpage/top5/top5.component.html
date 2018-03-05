@@ -4,31 +4,20 @@
    <div class="top-songs">
 
 <ul>
-    <div class="song-card-header">
-      <h3>NAME</h3>
-      <h3>ARTIST</h3>
-      <h3>ALBUM</h3>
-      <svg class="time-icon" viewBox="0 0 24 24"><g><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></g></svg>
-      <svg class="play-count" viewBox="0 0 24 24" ><g>
-        <path d="M19,5.63610677 L13.7501535,5.63610677 L13.7501535,17.6534397 C13.7501535,20.9622968 9.83901787,23.4575751 6.6059874,21.0259287 C6.14662583,20.6804985 5.7747617,20.2350755 5.525394,19.70784 C3.90669133,16.2898996 6.26474738,12.9083203 9.37528143,12.9083203 C10.3552528,12.9083203 11.2827257,13.2537505 12.0002047,13.817347 L12.0002047,2 L19,2 L19,5.63610677 L19,5.63610677 Z" class="style-scope iron-icon"></path>
-      </g></svg>
-      <svg class="thumbs" viewBox="0 0 24 24"><g><path d="M12 6c0-.55-.45-1-1-1H5.82l.66-3.18.02-.23c0-.31-.13-.59-.33-.8L5.38 0 .44 4.94C.17 5.21 0 5.59 0 6v6.5c0 .83.67 1.5 1.5 1.5h6.75c.62 0 1.15-.38 1.38-.91l2.26-5.29c.07-.17.11-.36.11-.55V6zm10.5 4h-6.75c-.62 0-1.15.38-1.38.91l-2.26 5.29c-.07.17-.11.36-.11.55V18c0 .55.45 1 1 1h5.18l-.66 3.18-.02.24c0 .31.13.59.33.8l.79.78 4.94-4.94c.27-.27.44-.65.44-1.06v-6.5c0-.83-.67-1.5-1.5-1.5z"></path></g></svg>
-    </div>
-    <li *ngFor="let song of artistInfo[0].top5">
-      <div class="song-card"
-           (click)="getSong(song)">
+  <li *ngFor="let song of artistInfo[0].top5">
+    <div class="song-card"
+        (click)="getSong(song)">
         <img src="{{song.albumCover}}" alt="album cover">
         <p class="song-name">{{song.name}}</p>
-        <p class="song-artist">{{song.artistName}}</p>
         <p class="song-album">{{song.album}}</p>
         <p class="song-length">{{song.length}}</p>
         <svg *ngIf="song.isExplicit === 'true'"
-             viewBox="0 0 24 24"
-             class="explicit-top-5">
+          viewBox="0 0 24 24"
+          class="explicit-top-5">
           <g>
             <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"></path></g>
-        </svg>
-      </div>
-    </li>
+          </svg>
+        </div>
+      </li>
   </ul>
 </div>
