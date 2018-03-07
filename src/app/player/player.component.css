@@ -1,8 +1,8 @@
 .player {
   background: radial-gradient(
     rgba(250,131,45, 1),
-    rgba(250,131,45, 0.9),
-    rgba(250,131,45, 0.9));
+    rgba(250,131,45, 1),
+    rgba(250,131,45, 1));
   position: fixed;
   bottom: 0;
   width: 100%;
