@@ -1,14 +1,64 @@
-/* Related */
-
-.related{
-  background-color: rgba(250,131,45,0.2);
-  height: 360px;
-  width: auto;
-  margin-top: 30px;
-  margin-bottom: 200px;
+.container{
+  height: 420px;
+  width: 820px;
+  transition: 0.5s;
+  margin: 100px 0 150px 0;
   position: relative;
-  left: 0px;
-  padding: 10px;
-  box-shadow: 20px 20px 100px 20px rgba(250,131,45,0.04),
-              -1px -1px 100px 20px rgba(250,131,45,0.04);
+  overflow: hidden;
+}
+
+
+.container:hover {
+  background: linear-gradient(to right,
+    rgba(245,245,245,1),
+    rgba(250,131,45,0.1));
+  box-shadow: 0 15px 15px -15px rgba(0,0,0,0.5),
+              inset 0 15px 15px -15px rgba(0,0,0,0.5);
+}
+
+.header{
+  background: radial-gradient(
+    rgba(250,131,45, 1),
+    rgba(250,131,45, 0.9),
+    rgba(250,131,45, 0.8));
+  padding-top: 25px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.header > h2 {
+  position: relative;
+  top: -10px;
+  left: 25px;
+  font-size: 1.2em;
+  color: white;
+  background-color: ;
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+ul {
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 50px 0px 0px;
+}
+
+.artist {
+  height: 130px;
+  width: 130px;
+
+}
+
+img {
+  height: inherit;
+  width: inherit;
+  border-radius: 100px;
+}
+
+p{
+  text-align: center;
 }
