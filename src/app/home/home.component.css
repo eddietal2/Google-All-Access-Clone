@@ -1,11 +1,20 @@
-.recent{
-  background-color: ;
-  width: 80%;
-  height: 200px;
-  margin: 10px;
+.container{
+  background-color: rgba(0,0,0,0.1);
+  width: 800px;
+  margin: 70px 0 0 0;
+  transition: 0.2s;
+  padding: 20px;
+  background: linear-gradient(to right,
+    rgba(245,245,245,1),
+    rgba(250,131,45,0.1));
 }
 
-.recent > hr {
+.container:hover{
+  box-shadow: 0 15px 15px -15px rgba(0,0,0,0.5),
+              inset 0 8px 8px -8px rgba(0,0,0,0.2);
+}
+
+.container > hr {
   border: 1px solid rgba(0,0,0,0.2);
   position: relative;
   top: 20px;
@@ -28,13 +37,8 @@ hr {
   width: 100px;
 }
 
-/* Recents Section */
-.recent > ul {
-  background-color: rgba(0,0,0,0.1);
-  padding: 25px;
-}
 
-.recent > ul > li {
+.container > ul > li {
   display: inline-block;
   margin: 10px;
   height: 100px;
@@ -43,13 +47,13 @@ hr {
   vertical-align: top;
 }
 
-.recent > ul > li > img {
+.container > ul > li > img {
   height: 100px;
   width: 100px;
   transition: 0.2s;
 }
 
-.recent > ul > li > img:hover {
+.container > ul > li > img:hover {
   transform: scale(1.005);
   box-shadow: 3px 3px 10px rgba(0,0,0,0.15),
               -3px -3px 10px rgba(0,0,0,0.15);
@@ -64,7 +68,7 @@ h1 {
 }
 
 .new-releases, .party-playlist, .workout-playlist, .study-playlist{
-  background-color: ;
+  background-color: red;
   width: 100%;
   height: auto;
   padding-bottom: 250px;
@@ -84,7 +88,7 @@ h1 {
  {
   display: inline-block;
   margin: 10px;
-  height: 250px;
-  width: 250px;
+  height: 100px;
+  width: 100px;
   background-color: blue;
 }
