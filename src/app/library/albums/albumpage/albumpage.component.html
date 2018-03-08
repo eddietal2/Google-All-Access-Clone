@@ -1,10 +1,15 @@
 <library-nav></library-nav>
 
 <div class="album">
-  <img [@slide-in]="state" src="{{albumToDisplay.albumCover}}" style="float: left;"/>
+  <img [@slide-in-pic]="state"
+       src="{{albumToDisplay.albumCover}}"
+       style="float: left;"/>
 
-  <div class="info">
+  <!-- Info Card -->
+  <div [@slide-in-info]="state"
+       class="info">
     <h1>{{albumToDisplay.name}}</h1>
+    <hr>
     <svg class="explicit"
         *ngIf="albumToDisplay.isExplicit === 'true'"
         viewBox="0 0 24 24"
@@ -12,31 +17,24 @@
         focusable="false">
           <g class="style-scope iron-icon">
             <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"></path></g></svg>
-
-      <i class="fa fa-play fa-lg"></i><br>
-
     <div class="info-2">
-      <a (click)="goToDetailPage(albumToDisplay.artistName)">{{albumToDisplay.artistName}}</a><br>
-      <p>{{albumToDisplay.year}}</p>
-      <p>{{albumToDisplay.genre}}</p>
-      <p>{{albumToDisplay.totalLength}}</p>
-    </div>
-
-    <div class="info-3">
-      <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
-        <g>
-          <path d="M4,6 L2,6 L2,20 C2,21.1 2.9,22 4,22 L18,22 L18,20 L4,20 L4,6 L4,6 Z M20,2 L8,2 C6.9,2 6,2.9 6,4 L6,16 C6,17.1 6.9,18 8,18 L20,18 C21.1,18 22,17.1 22,16 L22,4 C22,2.9 21.1,2 20,2 Z M12.468781,14 L9,10.5021861 L10.4023786,9.08806996 L12.468781,11.1717676 L17.5976214,6 L19,7.41411618 L12.468781,14 Z" class="style-scope iron-icon"></path>
-        </g></svg>
-      <p>Remove from Library</p>
+      <p style="display: inline;">Artist:&nbsp;&nbsp;</p>
+        <a (click)="goToDetailPage(albumToDisplay.artistName)">{{albumToDisplay.artistName}}</a><br>
+      <p>Year:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{albumToDisplay.year}}</p>
+      <p>Genre:&nbsp;&nbsp;&nbsp;&nbsp;{{albumToDisplay.genre}}</p>
+      <p>Length: &nbsp;&nbsp;{{albumToDisplay.totalLength}}</p>
     </div>
   </div>
+
 </div>
 
-<!-- Section with Album Songs -->
-<div class="songs">
-  
+
+<div class="songs"> <!-- Section with Album Songs -->
+
+  <!-- Header for songs on the album -->
   <div class="song-card-header">
-    <h3>NAME</h3>
+    <h3 class="number">#</h3>
+    <h3 class="name">NAME</h3>
     <svg class="time-icon" viewBox="0 0 24 24"><g><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></g></svg>
     <svg class="play-count" viewBox="0 0 24 24" ><g>
       <path d="M19,5.63610677 L13.7501535,5.63610677 L13.7501535,17.6534397 C13.7501535,20.9622968 9.83901787,23.4575751 6.6059874,21.0259287 C6.14662583,20.6804985 5.7747617,20.2350755 5.525394,19.70784 C3.90669133,16.2898996 6.26474738,12.9083203 9.37528143,12.9083203 C10.3552528,12.9083203 11.2827257,13.2537505 12.0002047,13.817347 L12.0002047,2 L19,2 L19,5.63610677 L19,5.63610677 Z" class="style-scope iron-icon"></path>
@@ -44,23 +42,43 @@
     <svg class="thumbs" viewBox="0 0 24 24"><g><path d="M12 6c0-.55-.45-1-1-1H5.82l.66-3.18.02-.23c0-.31-.13-.59-.33-.8L5.38 0 .44 4.94C.17 5.21 0 5.59 0 6v6.5c0 .83.67 1.5 1.5 1.5h6.75c.62 0 1.15-.38 1.38-.91l2.26-5.29c.07-.17.11-.36.11-.55V6zm10.5 4h-6.75c-.62 0-1.15.38-1.38.91l-2.26 5.29c-.07.17-.11.36-.11.55V18c0 .55.45 1 1 1h5.18l-.66 3.18-.02.24c0 .31.13.59.33.8l.79.78 4.94-4.94c.27-.27.44-.65.44-1.06v-6.5c0-.83-.67-1.5-1.5-1.5z"></path></g></svg>
   </div>
 
-  <ul style="position: relative; left: -40px;">
-  <li class="song-block"
-      *ngFor='let song of songsToDisplay'
-      (click)="getSong(song)">
-    <div class="song-card">
-      <p class="song-number">{{song.tracknumber}}</p>
-      <p class="song-name">{{song.name}}</p>
-      <p class="song-length">{{song.length}}</p>
-      <svg class="explicit"
-          *ngIf="albumToDisplay.isExplicit === 'true'"
-          viewBox="0 0 24 24"
-          preserveAspectRatio="xMidYMid meet"
-          focusable="false">
-            <g class="style-scope iron-icon">
-              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"></path></g></svg>
-    </div>
 
-  </li>
-</ul>
+
+  <ul> <!-- Each song on the album -->
+    <li class="song-block"
+        *ngFor='let song of songsToDisplay'
+        (click)="getSong(song)"
+        (mouseenter)="song.thumbsVisible=true"
+        (mouseleave)="song.thumbsVisible=false"
+        (click)="addPlay(song)">
+      <div class="song-card">
+        <p *ngIf="!song.isPlaying"
+            class="song-number">{{song.tracknumber}}</p>
+        <i *ngIf="song.isPlaying"
+            class="fa fa-play fa-lg"></i>
+        <p class="song-name">{{song.name}}</p>
+        <p class="song-length">{{song.length}}</p>
+        <div class="thumbs"
+             *ngIf="song.thumbsVisible"> <!-- Thumbs section -->
+          <i class="fa fa-thumbs-up fa-lg" [ngClass]="selected"
+             (click)="thumbs(song)"
+             >
+          </i>
+          <i class="fa fa-thumbs-down fa-lg" [ngClass]="selected"
+             (click)="thumbs(song)"
+             >
+          </i>
+        </div>
+
+        <p class="plays">{{song.plays}}</p>
+        <svg class="explicit"
+            *ngIf="albumToDisplay.isExplicit === 'true'"
+            viewBox="0 0 24 24"
+            preserveAspectRatio="xMidYMid meet"
+            focusable="false">
+              <g class="style-scope iron-icon">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"></path></g></svg>
+      </div>
+    </li>
+  </ul>
 </div>
