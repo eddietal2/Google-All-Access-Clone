@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { trigger, state, style, transition, animate, keyframes} from '@angular/animations';
 import { SharedService } from './../../../shared.service';
+import { RecentService } from './../../../recent.service';
 
 
 
@@ -13,13 +14,35 @@ import { SharedService } from './../../../shared.service';
   templateUrl: './albumpage.component.html',
   styleUrls: ['./albumpage.component.css'],
   animations: [
-    trigger('slide-in', [
+    trigger('slide-in-pic', [
       state('out', style({
         transform: 'translateX(-100px)',
         opacity: '0'
       })),
       state('in', style({
         transform: 'translateX(1px)',
+        opacity: '1'
+      })),
+      transition('out <=> in',
+        animate('500ms ease-out'))
+    ]),
+    trigger('slide-in-info', [
+      state('out', style({
+        transform: 'translateX(100px)',
+        opacity: '0'
+      })),
+      state('in', style({
+        transform: 'translateX(1px)',
+        opacity: '1'
+      })),
+      transition('out <=> in',
+        animate('500ms ease-out'))
+    ]),
+    trigger('thumb-animation', [
+      state('out', style({
+        opacity: '0'
+      })),
+      state('in', style({
         opacity: '1'
       })),
       transition('out <=> in',
@@ -33,6 +56,9 @@ export class AlbumpageComponent implements OnInit,  AfterViewInit  {
 
 
   state: string = 'out';
+  plays: number = 0;
+  clicked: boolean = false;
+  isPlaying: boolean = false;
   song: any;
   albumName:string = null;
   albumToDisplay: string;
@@ -87,10 +113,34 @@ export class AlbumpageComponent implements OnInit,  AfterViewInit  {
   }
 
   // Gets the object for each song that is selected
-  getSong(x){
-    console.log(x);
-    this.sharedService.emitChange(x);
+  getSong(song){
+    this.sharedService.emitChange(song);
+    this.recentService.emitChange(song);
+    song.isPlaying = true;
+    console.log(song)
   }
+
+
+
+  addPlay(song){
+    song.plays = (song.plays) ? song.plays + 1 : 1;
+    console.log(song.plays)
+}
+
+
+  thumbsVisible: boolean = false;
+  thumb: boolean = false;
+  upSelected: boolean = false;
+  downSelected: boolean = false;
+  selected = "";
+
+thumbs(song){
+  song.thumb = !song.thumb;
+  song.selected = 'selected';
+  console.log("Thumb is: " + song.thumb);
+  console.log("Thumb is: " + song.selected);
+}
+
 
   constructor(
     private route: ActivatedRoute,
@@ -98,18 +148,19 @@ export class AlbumpageComponent implements OnInit,  AfterViewInit  {
     private location: Location,
     private dataService: DataService,
     private sharedService: SharedService,
+    private recentService: RecentService,
     private  cdRef:ChangeDetectorRef
   ){}
 
   ngOnInit(){
     this.albumName = this.route.snapshot.params['albumName'];
     this.albumToDisplay = this.getAlbumById(this.albumName);
-    this.songsToDisplay = this.getSongsByArtist(this.albumSongs)
-
+    this.songsToDisplay = this.getSongsByArtist(this.albumSongs);
+    console.log(this.clicked)
   }
 
   ngAfterViewInit() {
-     this.state = (this.state === 'in' ? 'out' : 'in')
+     this.state = (this.state === 'in' ? 'out' : 'in');
      this.cdRef.detectChanges();
   }
 }
