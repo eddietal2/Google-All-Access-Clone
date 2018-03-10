@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './../../data.service';
+import { SharedService } from './../../shared.service';
 
 @Component({
   selector: 'songs',
@@ -8,9 +9,16 @@ import { DataService } from './../../data.service';
 })
 export class SongsComponent implements OnInit {
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService,
+              private sharedService: SharedService,) { }
 
   artistData = this.dataService.data.artists;
+  plays: number = 0;
+  clicked: boolean = false;
+  isPlaying: boolean = false;
+  thumbsVisible: boolean = false;
+  thumb: boolean = null;
+
 
   // Gets all the albums from each artist and combines then into a single array
   getAlbums = this.artistData.reduce(
@@ -32,18 +40,35 @@ export class SongsComponent implements OnInit {
   }, []);
 
 
-  // In the song array of objects that is made from 'getSongs', gets the
-  // name property of each object and reduces it to a single array
-  getSongNames = this.getSongs.reduce( (a, b) => {
-    a.push(b.name);
-      return a.sort(); // sorts songs in alphabetical order
-  }, []);
+  getSong(song){
+    this.sharedService.emitChange(song);
+    song.isPlaying = true;
+  }
+
+
+
+  addPlay(song){
+    song.plays = (song.plays) ? song.plays + 1 : 1;
+  }
+
+
+  click(song, thumb) {
+  if(thumb = "up") {
+     song.thumb = true;
+  }
+  if(thumb = "down") {
+    song.thumb = false;
+  }
+
+  console.log(song.thumb)
+  console.log(thumb)
+}
 
 
 
 
   ngOnInit() {
-    console.log(this.getSongNames);
+    console.log(this.getSongs.sort( song => song.name));
   }
 
 }
