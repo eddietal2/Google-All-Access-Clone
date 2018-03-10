@@ -371,16 +371,26 @@ svg{
 .message {
   height: auto;
   width: 100%;
-  background-color: rgba(250,131,45,0.2);
+  background: linear-gradient(to right,
+    rgba(245,245,245,1),
+    rgba(250,131,45,0.1));
+  border-bottom: 2px rgba(250,131,45,0.5) solid;
   position: relative;
   box-shadow: 0 5px 5px -5px rgba(0,0,0,0.5),
                5px 0 5px -5px rgba(0,0,0,0.5);
   left: 0;
   top: 1px;
   text-transform: none;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
   color: #666;
   padding: 12px;
   margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.message:hover {
+  position: relative;
+  left: -20px;
 }
 
 #settings-icon{
