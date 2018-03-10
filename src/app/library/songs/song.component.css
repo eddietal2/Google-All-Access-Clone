@@ -1,0 +1,206 @@
+li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+ul {
+  width: 820px;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+ul:hover {
+  background: linear-gradient(to right,
+    rgba(245,245,245,1),
+    rgba(250,131,45,0.1));
+    box-shadow: 0 15px 15px -15px rgba(0,0,0,0.5),
+                inset 0 15px 15px -15px rgba(0,0,0,0.5);
+}
+
+.header{
+  background: radial-gradient(
+    rgba(250,131,45, 1),
+    rgba(250,131,45, 0.9),
+    rgba(250,131,45, 0.8));
+  padding-top: 25px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  width: 820px;
+  position: relative;
+  left: -40px;
+  margin-bottom: 10px;
+}
+
+.header > h3 {
+  color: white;
+  display: inline;
+  font-size: 0.7em;
+}
+
+/* Name Column */
+.header > h3:nth-child(1){
+  position: relative;
+  left: 110px;
+  top: -15px;
+}
+
+/* Album Column */
+.header > h3:nth-child(2){
+  position: relative;
+  left: 520px;
+  top: -15px;
+}
+
+.header > .time-icon {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 355px;
+  top: -10px;
+}
+
+.header > .thumbs {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 590px;
+  top: -10px;
+}
+
+.header > .play-count {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 650px;
+  top: -10px;
+}
+
+.song-card{
+  height: 40px;
+  position: relative;
+  left: -40px;
+  padding: 10px;
+  transition: 0.2s;
+  width: 820px;
+  font-weight: 600;
+  color: #555;
+}
+
+.song-card:hover{
+  fill: white;
+  box-shadow: inset 0 -5px 5px -5px  rgba(250,131,45,0.9);
+  background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 5px;
+  top: -10px;
+}
+
+.song-name{
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 600;
+  top: 15px;
+  left: 120px;
+  color: #555;
+}
+
+.explicit-top-5{
+  display: inline-block;
+  position: absolute;
+  top: 13px;
+  left: 400px;
+  width: 20px;
+  height: 20px;
+  fill: #f83;
+  z-index: 999;
+}
+
+.song-album{
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 600;
+  top: 15px;
+  left: 565px;
+  color: #555;
+}
+
+.song-length{
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 600;
+  top: 15px;
+  left: 440px;
+  color: #555;
+}
+
+.fa-play{
+  position: absolute;
+  left: 20px;
+  top: 13px;
+  height: 30px;
+  width: 30px;
+  color: #58f;
+  text-align: center;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.fa-thumbs-down {
+  position: absolute;
+  left: 430px;
+  top: -17px;
+  opacity: 0.5;
+}
+
+.thumbUp{
+  color: #58f;
+}
+.thumbDown{
+  color: blue;
+}
+
+.fa-thumbs-up {
+  position: absolute;
+  left: 400px;
+  top: -17px;
+  opacity: 0.5;
+}
+.plays{
+  position: absolute;
+  top: 10px;
+  left: 785px;
+  font-size: 0.8em;
+}
+
+.thumbs {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 280px;
+  top: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    margin-left: 5px;
+    position: relative;
+    left: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eef;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #58f;
+}
