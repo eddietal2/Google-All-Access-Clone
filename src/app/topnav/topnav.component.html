@@ -8,8 +8,37 @@
     <i style=""class="fa fa-google fa-3x"></i>
     <p>Music</p>
   </div>
-  <i class="fa fa-search"></i>
-  <input id="search" type="text" name="" value="" placeholder="Search">
+
+  <!-- Div for Search-Bar -->
+  <div class="search-bar">
+
+    <form [formGroup]='stateForm'>
+      <i class="fa fa-search"></i>
+        <input
+          id='search'
+          placeholder="Search"
+          formControlName='search'
+          (click)="toggleDropDown()"
+          (blur)="closeDropDown()"
+          type='text'
+          novalidate>
+    </form>
+      <div *ngIf="showDropDown"
+           class="search-bar-results">
+        <li
+          *ngFor="let x of searchItems | filter: getSearchValue()"
+          (click)="selectValue(artist)">
+            <img src="{{x.image}}"
+                 alt="search result artist image"
+                 class="search-bar-image">
+            <p>{{x.name}}</p>
+            <p>{{x.type}}</p>
+        </li>
+      </div>
+
+
+  </div>
+
   <button (click)='animateAcc()'type="button" name="button"><i class="fa fa-user-circle fa-lg"></i></button>
   <button (click)='animateNoti()'type="button" name="button"><i class="fa fa-bell fa-lg"></i></button>
   <button (click)='animateApps()' type="button" name="button"><i class="fa fa-th fa-lg"></i></button>
@@ -60,6 +89,16 @@
     <p class="message">
       This interface is awesome !
     </p>
+    <p class="message">
+      It is taking me far longer to program than
+      to design and develop the front end :( Not
+      really a back-end guy although by the end
+      of this year I will be good.
+    </p>
+    <p class="message">
+      Having trouble with Observables.
+    </p>
+    
 </div>
 
 
