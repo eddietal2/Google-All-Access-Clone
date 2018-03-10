@@ -27,7 +27,7 @@ nav {
 }
 
 .notifications > h3{
-  color: #666;
+  color: #eef;
   margin-bottom: 20px;
   text-transform: uppercase;
   padding: 10px;
@@ -37,7 +37,7 @@ nav {
 }
 
 .notifications> hr{
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.9);
   position: relative;
   top: -13px;
   left: 19px;
@@ -359,7 +359,7 @@ svg{
 .notifications{
   height: 400px;
   width: 300px;
-  background-color: #eef;
+  background-color: #58f;
   position: absolute;
   right: 20px;
   top: -400px;
@@ -371,9 +371,7 @@ svg{
 .message {
   height: auto;
   width: 100%;
-  background: linear-gradient(to right,
-    rgba(245,245,245,1),
-    rgba(250,131,45,0.1));
+  background: #eef;
   border-bottom: 2px rgba(250,131,45,0.5) solid;
   position: relative;
   box-shadow: 0 5px 5px -5px rgba(0,0,0,0.5),
@@ -391,6 +389,8 @@ svg{
 .message:hover {
   position: relative;
   left: -20px;
+  box-shadow: 0 5px 5px -5px rgba(0,0,0,0.5),
+               -5px 0 5px -5px rgba(0,0,0,0.5);
 }
 
 #settings-icon{
@@ -398,7 +398,7 @@ svg{
   float: right;
   top: -45px;
   right: 20px;
-  color: #666;
+  color: #eef;
 }
 
 .accounts{
