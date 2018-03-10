@@ -7,6 +7,7 @@ Right now, these are the things that need to be done:
 - Create logo for 'E-Player' (E stands for Eddie, so Eddie player basically)
 - Craft out custom playlist
 - Craft out homepage.
+- Optimize for Cross-Browser compatibility 
 
 
 
