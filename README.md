@@ -1,3 +1,10 @@
+*** UPDATE 2021 ***
+Man, I sucked around this time. I tried to re create the then, Google All Access streaming service. I had no idea how to work on the back end at the time. I had a HUGE in app "database", which was just a big array of objects. At the time, Angular was still overwelming at points. Glad I did this thought. Only got one CD on the whole library to play!
+
+
+
+----
+
 This is a project I am doing for myself. Originally it started as a clone of Google All Access written in Angular (to learn), but now I am going to create my own svg logos / brand image and create my own music player.
 
 Right now, these are the things that need to be done:
